@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>가입해라</title>
+</head>
+<body>
+<form method="post" th:action="@{/user/signup}">
+    <input type="text" placeholder="아이디" name="userId">
+    <input type="password" placeholder="비밀번호" name="password">
+    <button type="submit">가입</button>
+    <p style="color: #ff0000" th:text="${errorMassage}"></p>
+</form>
+</body>
+</html>

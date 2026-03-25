@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>로그인해라</title>
+    <link rel="stylesheet" th:href="@{/css/main.css}">
+</head>
+<body>
+    <form method="post" th:action="@{/user/login}">
+        <input type="text" placeholder="아이디" name="userId">
+        <input type="password" placeholder="비밀번호" name="password">
+        <button type="submit">로그인</button>
+        <p style="color: #ff0000" th:if="${param.error}">
+            아이디 또는 비밀번호가 다름
+        </p>
+    </form>
+</body>
+</html>
